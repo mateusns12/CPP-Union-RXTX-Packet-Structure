@@ -5,12 +5,12 @@ struct Data{
 	float temperature;
 	float umidity;
 	float light;
-}
+};
 
 union Packet{
 	Data data;
 	char buffer[sizeof(Data)];
-}
+};
 
 union Packet packet_rx;
 union Packet packet_tx;
@@ -20,7 +20,7 @@ void Receive();
 void InitPkt();
 
 int main() {
-	Init();
+	InitPkt();
 	return 0;
 }
 
